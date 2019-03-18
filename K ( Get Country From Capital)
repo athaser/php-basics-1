@@ -1,0 +1,53 @@
+
+<?php
+$EU = array(
+"Italy"=>"Rome",
+"Luxembourg"=>"Luxembourg",
+"Belgium"=> "Brussels",
+"Denmark"=>"Copenhagen",
+"Finland"=>"Helsinki",
+"France" => "Paris",
+"Slovakia"=>"Bratislava",
+"Slovenia"=>"Ljubljana",
+"Germany" => "Berlin",
+"Greece" => "Athens",
+"Ireland"=>"Dublin",
+"Netherlands"=>"Amsterdam",
+"Portugal"=>"Lisbon",
+"Spain"=>"Madrid",
+"Sweden"=>"Stockholm",
+"United Kingdom"=>"London",
+"Cyprus"=>"Nicosia",
+"Lithuania"=>"Vilnius",
+"Czech Republic"=>"Prague",
+"Estonia"=>"Tallin",
+"Hungary"=>"Budapest",
+"Latvia"=>"Riga",
+"Malta"=>"Valetta",
+"Austria" => "Vienna",
+"Poland"=>"Warsaw");
+
+ksort($EU);
+
+
+echo '<form name="form" action="" method="post">
+  <input type="text" name="capital" id="subject" >
+
+</form>';
+echo "<input type='submit' name='submit'>";
+
+echo $_POST ['capital'];
+
+if ($country = array_search ($_POST['capital'], $EU))
+{
+	echo "The country is : $country";
+	
+} else
+
+{
+	echo "No country";
+}
+
+
+
+
