@@ -1,5 +1,4 @@
 <?php
-echo "<b>Integer:</b> $int $oct $hex $div<p>\n";
 echo "<b>Booleans</b>.<br>\n";
 $yes = TRUE;
 $no = FALSE;
