@@ -1,0 +1,43 @@
+<html>  
+  <head> 
+    <title>PHP Exercise 1</title> 
+  </head> 
+  <body style="background-color:#666699; font-famil
+y:sans-serif; color:#ffffff">  
+<?php 
+$now = getdate(); 
+echo "Good "; 
+if($now['hours'] < 9) 
+        echo "morning."; 
+else if($now['hours'] < 12) 
+        echo "day."; 
+else if($now['hours'] < 17) 
+        echo "afternoon."; 
+else if($now['hours'] < 20) 
+        echo "evening."; 
+else 
+        echo "night."; 
+echo "  "; 
+if($now['wday'] == 0 || $now['wday'] == 6)  
+        echo "Little weekend surfing, I see."; 
+else  
+        echo "Hard at work, eh?"; 
+echo "<p>I perceive that you are "; 
+if(preg_match("/MSIE/i", $_SERVER['HTTP_USER_AGENT'
+])) 
+        echo "conventional."; 
+elseif(preg_match("/opera/i", $_SERVER['HTTP_USER_A
+GENT'])) 
+        echo "daring."; 
+elseif(preg_match("/lynx/i", $_SERVER['HTTP_USER_AG
+ENT'])) 
+        echo "cheap."; 
+elseif(preg_match("/netscape/i", $_SERVER['HTTP_USE
+R_AGENT'])) 
+        echo "stubborn."; 
+else 
+        echo "different."; 
+        
+?> 
+  </body>  
+</html> 
